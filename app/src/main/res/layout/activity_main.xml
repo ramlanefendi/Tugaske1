@@ -5,33 +5,45 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <CheckBox
-        android:id="@+id/rotiCheckBox"
+    <TextView
+        android:id="@+id/titleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Roti (Rp. 5000)" />
+        android:text="Kasir Sederhana"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
 
     <CheckBox
-        android:id="@+id/susuCheckBox"
+        android:id="@+id/pulsaCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Susu (Rp. 10000)"
-        android:layout_below="@id/rotiCheckBox"
+        android:text="Pulsa (Rp. 5000)"
+        android:layout_below="@id/titleTextView"
         android:layout_marginTop="20dp" />
 
     <CheckBox
-        android:id="@+id/telurCheckBox"
+        android:id="@+id/voucherCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Telur (Rp. 15000)"
-        android:layout_below="@id/susuCheckBox"
+        android:text="Token (Rp. 10000)"
+        android:layout_below="@id/pulsaCheckBox"
+        android:layout_marginTop="20dp" />
+
+    <CheckBox
+        android:id="@+id/tokenCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voucher (Rp. 15000)"
+        android:layout_below="@id/voucherCheckBox"
         android:layout_marginTop="20dp" />
 
     <RadioGroup
         android:id="@+id/membershipRadioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/telurCheckBox"
+        android:layout_below="@id/tokenCheckBox"
         android:layout_marginTop="20dp">
 
         <RadioButton

@@ -1,7 +1,6 @@
 package com.example.tugas1;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -12,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private CheckBox rotiCheckBox, susuCheckBox, telurCheckBox;
+    private CheckBox PulsaCheckBox, TokenCheckBox, VoucherCheckBox;
     private RadioGroup membershipRadioGroup;
     private RadioButton memberRadioButton, nonMemberRadioButton;
     private TextView totalTextView, receiptTextView;
@@ -24,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        rotiCheckBox = findViewById(R.id.rotiCheckBox);
-        susuCheckBox = findViewById(R.id.susuCheckBox);
-        telurCheckBox = findViewById(R.id.telurCheckBox);
+        PulsaCheckBox = findViewById(R.id.pulsaCheckBox);
+        TokenCheckBox = findViewById(R.id.voucherCheckBox);
+        VoucherCheckBox = findViewById(R.id.tokenCheckBox);
         membershipRadioGroup = findViewById(R.id.membershipRadioGroup);
         memberRadioButton = findViewById(R.id.memberRadioButton);
         nonMemberRadioButton = findViewById(R.id.nonMemberRadioButton);
@@ -40,9 +39,9 @@ public class MainActivity extends AppCompatActivity {
             calculateTotal();
         };
 
-        rotiCheckBox.setOnCheckedChangeListener(checkBoxListener);
-        susuCheckBox.setOnCheckedChangeListener(checkBoxListener);
-        telurCheckBox.setOnCheckedChangeListener(checkBoxListener);
+        PulsaCheckBox.setOnCheckedChangeListener(checkBoxListener);
+        TokenCheckBox.setOnCheckedChangeListener(checkBoxListener);
+        VoucherCheckBox.setOnCheckedChangeListener(checkBoxListener);
 
         membershipRadioGroup.setOnCheckedChangeListener((group, checkedId) -> {
             calculateTotal();
@@ -52,14 +51,14 @@ public class MainActivity extends AppCompatActivity {
     private void showReceipt() {
         StringBuilder receiptText = new StringBuilder("Detail Pembelian:\n");
 
-        if (rotiCheckBox.isChecked()) {
-            receiptText.append("Roti (Rp. 5000)\n");
+        if (PulsaCheckBox.isChecked()) {
+            receiptText.append("Pulsa(Rp. 5000)\n");
         }
-        if (susuCheckBox.isChecked()) {
-            receiptText.append("Susu (Rp. 10000)\n");
+        if (PulsaCheckBox.isChecked()) {
+            receiptText.append("Token(Rp. 10000)\n");
         }
-        if (telurCheckBox.isChecked()) {
-            receiptText.append("Telur (Rp. 15000)\n");
+        if (VoucherCheckBox.isChecked()) {
+            receiptText.append("Voucher(Rp. 15000)\n");
         }
 
         receiptText.append("\n");
@@ -77,13 +76,13 @@ public class MainActivity extends AppCompatActivity {
     private void calculateTotal() {
         totalHarga = 0;
 
-        if (rotiCheckBox.isChecked()) {
+        if (PulsaCheckBox.isChecked()) {
             totalHarga += 5000;
         }
-        if (susuCheckBox.isChecked()) {
+        if (TokenCheckBox.isChecked()) {
             totalHarga += 10000;
         }
-        if (telurCheckBox.isChecked()) {
+        if (VoucherCheckBox.isChecked()) {
             totalHarga += 15000;
         }
 
