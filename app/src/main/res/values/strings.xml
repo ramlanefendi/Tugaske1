@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">NamaAplikasi</string>
     <string name="title_activity_main">Judul Aplikasi</string>
-    <string name="Title">Aplikasi Kasir</string>
+    <string name="aplikasi_kasir_sederhana">Aplikasi Kasir Sederhana</string>
 </resources>

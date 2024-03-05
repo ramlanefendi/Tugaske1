@@ -5,19 +5,11 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="25dp"
-        android:textAlignment="center"
-        android:text="@string/Title" />
-
     <CheckBox
         android:id="@+id/rotiCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Roti (Rp. 5000)"
-        android:layout_marginTop="20dp"/>
+        android:text="Roti (Rp. 5000)" />
 
     <CheckBox
         android:id="@+id/susuCheckBox"
@@ -35,21 +27,33 @@
         android:layout_below="@id/susuCheckBox"
         android:layout_marginTop="20dp" />
 
-    <EditText
-        android:id="@+id/jumlahUangEditText"
-        android:layout_width="match_parent"
+    <RadioGroup
+        android:id="@+id/membershipRadioGroup"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Jumlah Uang"
-        android:inputType="numberDecimal"
         android:layout_below="@id/telurCheckBox"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp">
+
+        <RadioButton
+            android:id="@+id/memberRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Member" />
+
+        <RadioButton
+            android:id="@+id/nonMemberRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Non Member" />
+
+    </RadioGroup>
 
     <Button
         android:id="@+id/checkoutButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Checkout"
-        android:layout_below="@id/jumlahUangEditText"
+        android:layout_below="@id/membershipRadioGroup"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp" />
 
@@ -62,13 +66,17 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp" />
 
+    <!-- Tambahkan TextView untuk menampilkan detail bon pembelian -->
     <TextView
-        android:id="@+id/kembalianTextView"
+        android:id="@+id/receiptTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kembalian: Rp. 0"
+        android:text=""
         android:layout_below="@id/totalTextView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
 
 </RelativeLayout>
