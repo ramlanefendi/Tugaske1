@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">NamaAplikasi</string>
+    <string name="title_activity_main">Judul Aplikasi</string>
+    <string name="Title">Aplikasi Kasir</string>
+</resources>

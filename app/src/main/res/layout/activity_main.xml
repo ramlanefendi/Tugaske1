@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:text="@string/Title" />
+
+    <CheckBox
+        android:id="@+id/rotiCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Roti (Rp. 5000)"
+        android:layout_marginTop="20dp"/>
+
+    <CheckBox
+        android:id="@+id/susuCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Susu (Rp. 10000)"
+        android:layout_below="@id/rotiCheckBox"
+        android:layout_marginTop="20dp" />
+
+    <CheckBox
+        android:id="@+id/telurCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Telur (Rp. 15000)"
+        android:layout_below="@id/susuCheckBox"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:id="@+id/jumlahUangEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Jumlah Uang"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/telurCheckBox"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/checkoutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Checkout"
+        android:layout_below="@id/jumlahUangEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/totalTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Harga: Rp. 0"
+        android:layout_below="@id/checkoutButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/kembalianTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kembalian: Rp. 0"
+        android:layout_below="@id/totalTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+</RelativeLayout>
